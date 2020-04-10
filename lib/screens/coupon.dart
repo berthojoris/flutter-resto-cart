@@ -2,23 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutterresturant/utils/config.dart';
 import 'package:flutterresturant/utils/helper.dart';
 
-class CouponXD extends StatefulWidget{
+class CouponXD extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _CouponXDState();
   }
-
 }
 
 class _CouponXDState extends State<CouponXD> {
-
   List _couponList = [
     new CouponItem('img/coupon1.png', 'SWIGGYIT', 'Get 50% off', ''),
     new CouponItem('img/coupon2.png', 'DINNER60', 'Get 60% off', ''),
-    new CouponItem('img/coupon3.png', 'CELEBRATE30', 'Get 30% using debit card', ''),
-    new CouponItem('img/coupon4.png', 'PHONEPESUPER', 'Get 25% discount using Phonepe', ''),
+    new CouponItem(
+        'img/coupon3.png', 'CELEBRATE30', 'Get 30% using debit card', ''),
+    new CouponItem('img/coupon4.png', 'PHONEPESUPER',
+        'Get 25% discount using Phonepe', ''),
   ];
-
 
   @override
   void initState() {
@@ -40,8 +39,6 @@ class _CouponXDState extends State<CouponXD> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-
-
                   //AppBar
                   SizedBox(
                     height: SizeConfig.safeBlockVertical * 6.4,
@@ -67,10 +64,11 @@ class _CouponXDState extends State<CouponXD> {
                             wordSpacing: 1.4,
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(width: SizeConfig.safeBlockHorizontal * 6,),
+                      SizedBox(
+                        width: SizeConfig.safeBlockHorizontal * 6,
+                      ),
                     ],
                   ),
-
 
                   //Enter coupon code
                   SizedBox(
@@ -78,35 +76,37 @@ class _CouponXDState extends State<CouponXD> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(SizeConfig.safeBlockVertical)
-                    ),
-                    padding: EdgeInsets.symmetric(vertical: SizeConfig.safeBlockVertical,
-                              horizontal: SizeConfig.safeBlockHorizontal * 2.4),
+                        color: Colors.grey[100],
+                        borderRadius: BorderRadius.circular(
+                            SizeConfig.safeBlockVertical)),
+                    padding: EdgeInsets.symmetric(
+                        vertical: SizeConfig.safeBlockVertical,
+                        horizontal: SizeConfig.safeBlockHorizontal * 2.4),
                     child: Stack(
                       children: <Widget>[
                         TextFormField(
                           decoration: InputDecoration(
                             hintText: 'Enter Coupon Code',
                             hintStyle: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: SizeConfig.safeBlockHorizontal * 3.4,
-                              fontWeight: FontWeight.w500
-                            ),
+                                fontFamily: 'Poppins',
+                                fontSize: SizeConfig.safeBlockHorizontal * 3.4,
+                                fontWeight: FontWeight.w500),
                             border: InputBorder.none,
                           ),
                         ),
                         Align(
                           alignment: Alignment.centerRight,
                           child: Padding(
-                            padding: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 1.6,right: SizeConfig.safeBlockVertical),
+                            padding: EdgeInsets.only(
+                                top: SizeConfig.safeBlockVertical * 1.6,
+                                right: SizeConfig.safeBlockVertical),
                             child: Text(
                               'DONE',
                               style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  fontSize: SizeConfig.safeBlockHorizontal * 3.2,
-                                  fontWeight: FontWeight.w500
-                              ),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 3.2,
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
@@ -114,17 +114,17 @@ class _CouponXDState extends State<CouponXD> {
                     ),
                   ),
 
-
-                  SizedBox(height: SizeConfig.safeBlockVertical * 4,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical * 4,
+                  ),
                   Text(
                     'AVAILABLE COUPONS',
                     style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: SizeConfig.safeBlockHorizontal  * 3.2,
-                      letterSpacing: 0.4,
-                      wordSpacing: 2,
-                      fontWeight: FontWeight.w500
-                    ),
+                        fontFamily: 'Poppins',
+                        fontSize: SizeConfig.safeBlockHorizontal * 3.2,
+                        letterSpacing: 0.4,
+                        wordSpacing: 2,
+                        fontWeight: FontWeight.w500),
                   ),
 
                   SizedBox(
@@ -132,46 +132,64 @@ class _CouponXDState extends State<CouponXD> {
                     child: ListView.builder(
                         physics: BouncingScrollPhysics(),
                         itemCount: _couponList.length,
-                        itemBuilder: (context,index){
+                        itemBuilder: (context, index) {
                           return Padding(
-                            padding: EdgeInsets.only(bottom: SizeConfig.safeBlockVertical * 4.4),
+                            padding: EdgeInsets.only(
+                                bottom: SizeConfig.safeBlockVertical * 4.4),
                             child: Container(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Row(
                                         children: <Widget>[
                                           Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey[100],
-                                              borderRadius: BorderRadius.only(topRight: Radius.circular(SizeConfig.safeBlockHorizontal),
-                                              bottomRight: Radius.circular(SizeConfig.safeBlockHorizontal))
-                                            ),
-                                            padding: EdgeInsets.symmetric(vertical: SizeConfig.safeBlockVertical),
-                                            child: Image.asset(
-                                              '${_couponList[index].image}',
-                                              width: SizeConfig.safeBlockHorizontal  * 13.6,
-                                              height: SizeConfig.safeBlockVertical * 2.6,
-                                            )
-                                          ),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.grey[100],
+                                                  borderRadius: BorderRadius.only(
+                                                      topRight: Radius.circular(
+                                                          SizeConfig
+                                                              .safeBlockHorizontal),
+                                                      bottomRight: Radius
+                                                          .circular(SizeConfig
+                                                              .safeBlockHorizontal))),
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical: SizeConfig
+                                                      .safeBlockVertical),
+                                              child: Image.asset(
+                                                '${_couponList[index].image}',
+                                                width: SizeConfig
+                                                        .safeBlockHorizontal *
+                                                    13.6,
+                                                height: SizeConfig
+                                                        .safeBlockVertical *
+                                                    2.6,
+                                              )),
                                           Container(
                                             decoration: BoxDecoration(
                                                 color: Colors.grey[100],
-                                                borderRadius: BorderRadius.only(topLeft: Radius.circular(SizeConfig.safeBlockHorizontal),
-                                                    bottomLeft: Radius.circular(SizeConfig.safeBlockHorizontal))
-                                            ),
-                                            padding: EdgeInsets.all(SizeConfig.safeBlockVertical * 1.2),
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft: Radius.circular(
+                                                        SizeConfig
+                                                            .safeBlockHorizontal),
+                                                    bottomLeft: Radius.circular(
+                                                        SizeConfig
+                                                            .safeBlockHorizontal))),
+                                            padding: EdgeInsets.all(
+                                                SizeConfig.safeBlockVertical *
+                                                    1.2),
                                             child: Text(
-                                                '${_couponList[index].code}',
+                                              '${_couponList[index].code}',
                                               style: TextStyle(
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: SizeConfig.safeBlockHorizontal * 3.2,
-                                                letterSpacing: 0.2
-                                              ),
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: SizeConfig
+                                                          .safeBlockHorizontal *
+                                                      3.2,
+                                                  letterSpacing: 0.2),
                                             ),
                                           ),
                                         ],
@@ -181,55 +199,61 @@ class _CouponXDState extends State<CouponXD> {
                                         style: TextStyle(
                                             fontFamily: 'Poppins',
                                             fontWeight: FontWeight.w500,
-                                            fontSize: SizeConfig.safeBlockHorizontal * 3.2,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3.2,
                                             letterSpacing: 0.2,
-                                          color: Colors.orange[600]
-                                        ),
+                                            color: Colors.orange[600]),
                                       )
                                     ],
                                   ),
-                                  SizedBox(height: SizeConfig.safeBlockVertical * 2,),
+                                  SizedBox(
+                                    height: SizeConfig.safeBlockVertical * 2,
+                                  ),
                                   Text(
                                     '${_couponList[index].name}',
                                     style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w500,
-                                        fontSize: SizeConfig.safeBlockHorizontal * 3.2,
-                                        letterSpacing: 0.2
-                                    ),
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                3.2,
+                                        letterSpacing: 0.2),
                                   ),
-
-                                  SizedBox(height: SizeConfig.safeBlockVertical * 1.2,),
+                                  SizedBox(
+                                    height: SizeConfig.safeBlockVertical * 1.2,
+                                  ),
                                   Text(
-                                      'Use code SWIGGYIT and get 60% offon your next order No.'
-                                          ' minimum order value. Maximum discount of Rs 100',
+                                    'Use code SWIGGYIT and get 60% offon your next order No.'
+                                    ' minimum order value. Maximum discount of Rs 100',
                                     style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w400,
-                                        fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 3,
                                         letterSpacing: 0.2,
-                                        wordSpacing: 1
-                                    ),
+                                        wordSpacing: 1),
                                   ),
-
-                                  SizedBox(height: SizeConfig.safeBlockVertical * 1.6,),
+                                  SizedBox(
+                                    height: SizeConfig.safeBlockVertical * 1.6,
+                                  ),
                                   Text(
-                                      'MORE DETAILS',
+                                    'MORE DETAILS',
                                     style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w500,
-                                        fontSize: SizeConfig.safeBlockHorizontal * 3.1,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                3.1,
                                         letterSpacing: 0.2,
                                         wordSpacing: 2,
-                                        color: Colors.blue[600]
-                                    ),
+                                        color: Colors.blue[600]),
                                   ),
                                 ],
                               ),
                             ),
                           );
-                        }
-                    ),
+                        }),
                   )
                 ],
               ),

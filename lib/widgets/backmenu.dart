@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class BackMenuXD extends StatelessWidget {
-
   final Color _color = Colors.grey[700];
 
   @override
@@ -14,25 +13,28 @@ class BackMenuXD extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              CircleAvatar(
-                radius: 2.4,
-                backgroundColor: _color
+              CircleAvatar(radius: 2.4, backgroundColor: _color),
+              SizedBox(
+                width: 14,
               ),
-              SizedBox(width: 14,),
               CircleAvatar(
                 radius: 2.4,
                 backgroundColor: _color,
               )
             ],
           ),
-          SizedBox(height: 14,),
+          SizedBox(
+            height: 14,
+          ),
           Row(
             children: <Widget>[
               CircleAvatar(
                 radius: 2.4,
                 backgroundColor: _color,
               ),
-              SizedBox(width: 14,),
+              SizedBox(
+                width: 14,
+              ),
               CircleAvatar(
                 radius: 2.4,
                 backgroundColor: _color,

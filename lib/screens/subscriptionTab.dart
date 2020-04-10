@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterresturant/utils/config.dart';
 import 'package:flutterresturant/utils/helper.dart';
 
-
-class SubscriptionXD extends StatefulWidget{
-
+class SubscriptionXD extends StatefulWidget {
   @override
   State createState() {
     return _SubscriptionXDState();
@@ -13,13 +11,11 @@ class SubscriptionXD extends StatefulWidget{
 }
 
 class _SubscriptionXDState extends State<SubscriptionXD> {
-
   List _paymentList = [
     new Payment('img/coupon2.png', 'Google pay'),
     new Payment('img/coupon4.png', 'Phone Pe'),
     new Payment('img/amazon.png', 'Amazon Pay'),
   ];
-
 
   static List _planMenuList = [
     new PlanMenu('Veg Meal', '1'),
@@ -69,18 +65,12 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
     new Plan('40', '64', _planMenuList5),
   ];
 
-
   _setSelected(index, days) {
     setState(() {
       planSelected = index;
       totalPoints = days;
     });
   }
-
-
-
-
-
 
   int _index = 0;
 
@@ -89,7 +79,6 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
       _index = index;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +92,6 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
                 horizontal: SizeConfig.safeBlockHorizontal * 6.4),
             child: Column(
               children: <Widget>[
-
-
                 //AppBar
                 SizedBox(
                   height: SizeConfig.safeBlockVertical * 6.4,
@@ -115,10 +102,8 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
                       fontFamily: 'Poppins',
                       fontSize: SizeConfig.safeBlockHorizontal * 8.2,
                       fontWeight: FontWeight.w600,
-                      letterSpacing: 0.4
-                  ),
+                      letterSpacing: 0.4),
                 ),
-
 
                 //Selection between student,employee,others
                 SizedBox(
@@ -128,143 +113,143 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-
                     GestureDetector(
                       onTap: () {
                         _setIndex(0);
                       },
                       child: AnimatedSwitcher(
-                        transitionBuilder: (Widget child,
-                            Animation<double> animation) {
+                        transitionBuilder:
+                            (Widget child, Animation<double> animation) {
                           return ScaleTransition(
                               child: child, scale: animation);
                         },
                         duration: Duration(milliseconds: 200),
-                        child: _index == 0 ? Column(
-                          children: <Widget>[
-                            Text(
-                              'Student',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: SizeConfig.safeBlockHorizontal *
-                                      4.4,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                  letterSpacing: 0.4
+                        child: _index == 0
+                            ? Column(
+                                children: <Widget>[
+                                  Text(
+                                    'Student',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                4.4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                        letterSpacing: 0.4),
+                                  ),
+                                  CircleAvatar(
+                                    radius:
+                                        SizeConfig.safeBlockHorizontal * 0.8,
+                                  )
+                                ],
+                              )
+                            : Text(
+                                'Student',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal * 4,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey[600],
+                                    letterSpacing: 0.4),
                               ),
-                            ),
-                            CircleAvatar(
-                              radius: SizeConfig.safeBlockHorizontal * 0.8,
-                            )
-                          ],
-                        ) :
-
-                        Text(
-                          'Student',
-                          style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: SizeConfig.safeBlockHorizontal * 4,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey[600],
-                              letterSpacing: 0.4
-                          ),
-                        ),
                       ),
                     ),
-
-
-                    SizedBox(width: SizeConfig.safeBlockHorizontal * 8.4,),
+                    SizedBox(
+                      width: SizeConfig.safeBlockHorizontal * 8.4,
+                    ),
                     GestureDetector(
                       onTap: () {
                         _setIndex(1);
                       },
                       child: AnimatedSwitcher(
-                        transitionBuilder: (Widget child,
-                            Animation<double> animation) {
+                        transitionBuilder:
+                            (Widget child, Animation<double> animation) {
                           return ScaleTransition(
                               child: child, scale: animation);
                         },
                         duration: Duration(milliseconds: 200),
-                        child: _index == 1 ? Column(
-                          children: <Widget>[
-                            Text(
-                              'Employee',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: SizeConfig.safeBlockHorizontal *
-                                      4.4,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                  letterSpacing: 0.4
+                        child: _index == 1
+                            ? Column(
+                                children: <Widget>[
+                                  Text(
+                                    'Employee',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                4.4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                        letterSpacing: 0.4),
+                                  ),
+                                  CircleAvatar(
+                                    radius:
+                                        SizeConfig.safeBlockHorizontal * 0.8,
+                                  )
+                                ],
+                              )
+                            : Text(
+                                'Employee',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal * 4,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey[600],
+                                    letterSpacing: 0.4),
                               ),
-                            ),
-                            CircleAvatar(
-                              radius: SizeConfig.safeBlockHorizontal * 0.8,
-                            )
-                          ],
-                        ) :
-
-                        Text(
-                          'Employee',
-                          style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: SizeConfig.safeBlockHorizontal * 4,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey[600],
-                              letterSpacing: 0.4
-                          ),
-                        ),
                       ),
                     ),
-
-
-                    SizedBox(width: SizeConfig.safeBlockHorizontal * 8.4,),
+                    SizedBox(
+                      width: SizeConfig.safeBlockHorizontal * 8.4,
+                    ),
                     GestureDetector(
                       onTap: () {
                         _setIndex(2);
                       },
                       child: AnimatedSwitcher(
-                        transitionBuilder: (Widget child,
-                            Animation<double> animation) {
+                        transitionBuilder:
+                            (Widget child, Animation<double> animation) {
                           return ScaleTransition(
                               child: child, scale: animation);
                         },
                         duration: Duration(milliseconds: 200),
-                        child: _index == 2 ? Column(
-                          children: <Widget>[
-                            Text(
-                              'Others',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: SizeConfig.safeBlockHorizontal *
-                                      4.4,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                  letterSpacing: 0.4
+                        child: _index == 2
+                            ? Column(
+                                children: <Widget>[
+                                  Text(
+                                    'Others',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                4.4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                        letterSpacing: 0.4),
+                                  ),
+                                  CircleAvatar(
+                                    radius:
+                                        SizeConfig.safeBlockHorizontal * 0.8,
+                                  )
+                                ],
+                              )
+                            : Text(
+                                'Others',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal * 4,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey[600],
+                                    letterSpacing: 0.4),
                               ),
-                            ),
-                            CircleAvatar(
-                              radius: SizeConfig.safeBlockHorizontal * 0.8,
-                            )
-                          ],
-                        ) :
-
-                        Text(
-                          'Others',
-                          style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: SizeConfig.safeBlockHorizontal * 4,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey[600],
-                              letterSpacing: 0.4
-                          ),
-                        ),
                       ),
                     ),
-
                   ],
                 ),
-
 
                 //Plans
                 SizedBox(
@@ -295,77 +280,76 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
                                       borderRadius: BorderRadius.circular(
                                           SizeConfig.safeBlockHorizontal * 4),
                                       border: Border.all(
-                                          color: planSelected == index ? Colors
-                                              .orange[200] : Colors.grey[200]
-                                      )
-                                  ),
+                                          color: planSelected == index
+                                              ? Colors.orange[200]
+                                              : Colors.grey[200])),
                                   child: AnimatedSwitcher(
                                     duration: Duration(milliseconds: 200),
-                                    child: planSelected == index ?
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          top: SizeConfig.safeBlockVertical * 5,
-                                          bottom: SizeConfig.safeBlockVertical *
-                                              4),
-                                      child: ListView.builder(
-                                          itemCount: _planList[index].planMenu
-                                              .length,
-                                          itemBuilder: (context, index1) {
-                                            return Center(
-                                              child: Text(
-                                                '${_planList[index]
-                                                    .planMenu[index1]
-                                                    .count} x ${_planList[index]
-                                                    .planMenu[index1].name}',
+                                    child: planSelected == index
+                                        ? Padding(
+                                            padding: EdgeInsets.only(
+                                                top: SizeConfig
+                                                        .safeBlockVertical *
+                                                    5,
+                                                bottom: SizeConfig
+                                                        .safeBlockVertical *
+                                                    4),
+                                            child: ListView.builder(
+                                                itemCount: _planList[index]
+                                                    .planMenu
+                                                    .length,
+                                                itemBuilder: (context, index1) {
+                                                  return Center(
+                                                    child: Text(
+                                                      '${_planList[index].planMenu[index1].count} x ${_planList[index].planMenu[index1].name}',
+                                                      style: TextStyle(
+                                                          fontFamily: 'Poppins',
+                                                          letterSpacing: 0.2,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: SizeConfig
+                                                                  .safeBlockHorizontal *
+                                                              3),
+                                                    ),
+                                                  );
+                                                }),
+                                          )
+                                        : Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: <Widget>[
+                                              Text(
+                                                '\$${_planList[index].price}',
                                                 style: TextStyle(
                                                     fontFamily: 'Poppins',
                                                     letterSpacing: 0.2,
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: SizeConfig
-                                                        .safeBlockHorizontal * 3
-                                                ),
+                                                            .safeBlockHorizontal *
+                                                        6.4),
                                               ),
-                                            );
-                                          }
-                                      ),
-                                    )
-                                        :
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment
-                                          .center,
-                                      children: <Widget>[
-                                        Text(
-                                          '\$${_planList[index].price}',
-                                          style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              letterSpacing: 0.2,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: SizeConfig
-                                                  .safeBlockHorizontal * 6.4
+                                              Text(
+                                                '${_planList[index].validity} days',
+                                                style: TextStyle(
+                                                    fontFamily: 'Poppins',
+                                                    letterSpacing: 0.2,
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: SizeConfig
+                                                            .safeBlockHorizontal *
+                                                        3.2),
+                                              )
+                                            ],
                                           ),
-                                        ),
-                                        Text(
-                                          '${_planList[index].validity} days',
-                                          style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              letterSpacing: 0.2,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: SizeConfig
-                                                  .safeBlockHorizontal * 3.2
-                                          ),
-                                        )
-                                      ],
-                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           );
-                        }
-                    )
-                ),
+                        })),
 
-                SizedBox(height: SizeConfig.safeBlockVertical * 7.4,),
+                SizedBox(
+                  height: SizeConfig.safeBlockVertical * 7.4,
+                ),
                 SizedBox(
                   height: SizeConfig.safeBlockVertical * 8.4,
                   child: ListView.builder(
@@ -374,66 +358,63 @@ class _SubscriptionXDState extends State<SubscriptionXD> {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding: EdgeInsets.only(right: SizeConfig
-                              .safeBlockHorizontal * 8),
+                          padding: EdgeInsets.only(
+                              right: SizeConfig.safeBlockHorizontal * 8),
                           child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(
                                     SizeConfig.safeBlockHorizontal * 4),
-                                border: Border.all(color: Colors.grey[200])
-                            ),
+                                border: Border.all(color: Colors.grey[200])),
                             width: SizeConfig.screenWidth * 0.66,
                             padding: EdgeInsets.symmetric(
-                                horizontal: SizeConfig.safeBlockHorizontal *
-                                    4),
+                                horizontal: SizeConfig.safeBlockHorizontal * 4),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment
-                                  .spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-
                                 Row(
                                   children: <Widget>[
                                     SizedBox(
-                                      width: SizeConfig.safeBlockHorizontal *
-                                          0.3,),
+                                      width:
+                                          SizeConfig.safeBlockHorizontal * 0.3,
+                                    ),
                                     Image.asset(
                                       '${_paymentList[index].image}',
-                                      width: SizeConfig.safeBlockHorizontal *
-                                          10,
-                                      height: SizeConfig.safeBlockVertical *
-                                          5.2,
+                                      width:
+                                          SizeConfig.safeBlockHorizontal * 10,
+                                      height:
+                                          SizeConfig.safeBlockVertical * 5.2,
                                       fit: BoxFit.contain,
                                     ),
                                     SizedBox(
-                                      width: SizeConfig.safeBlockHorizontal *
-                                          3,),
+                                      width: SizeConfig.safeBlockHorizontal * 3,
+                                    ),
                                     Text(
                                       '${_paymentList[index].name}',
                                       style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 0.1,
-                                        fontSize: SizeConfig
-                                            .safeBlockHorizontal * 3.2,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                3.2,
                                       ),
                                     ),
                                   ],
                                 ),
-
                                 Icon(
                                   Icons.arrow_forward_ios,
                                   size: SizeConfig.safeBlockHorizontal * 3.2,
                                 ),
-
                               ],
                             ),
                           ),
                         );
-                      }
-                  ),
+                      }),
                 ),
 
-                SizedBox(height: SizeConfig.safeBlockVertical * 2,),
+                SizedBox(
+                  height: SizeConfig.safeBlockVertical * 2,
+                ),
                 Text(
                   'See terms and condition',
                   style: TextStyle(

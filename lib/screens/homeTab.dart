@@ -8,8 +8,7 @@ import 'package:flutterresturant/transition/scale.dart';
 import 'package:flutterresturant/utils/config.dart';
 import 'package:flutterresturant/widgets/special.dart';
 
-class HomeTabXD extends StatefulWidget{
-
+class HomeTabXD extends StatefulWidget {
   @override
   State createState() {
     return _HomeTabXDState();
@@ -25,7 +24,6 @@ class _HomeTabXDState extends State<HomeTabXD> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-
             //Appbar
             SizedBox(
               height: SizeConfig.safeBlockVertical * 6.4,
@@ -37,11 +35,13 @@ class _HomeTabXDState extends State<HomeTabXD> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   BackMenuXD(),
-                  Icon(Icons.person_outline,color: Colors.grey[800],)
+                  Icon(
+                    Icons.person_outline,
+                    color: Colors.grey[800],
+                  )
                 ],
               ),
             ),
-
 
             SizedBox(
               height: SizeConfig.safeBlockVertical * 4,
@@ -61,8 +61,7 @@ class _HomeTabXDState extends State<HomeTabXD> {
                             fontFamily: 'Poppins',
                             fontSize: SizeConfig.safeBlockHorizontal * 7.2,
                             fontWeight: FontWeight.w600,
-                            letterSpacing: 0.4
-                        ),
+                            letterSpacing: 0.4),
                       ),
                       Text(
                         'Healthy Food',
@@ -70,19 +69,21 @@ class _HomeTabXDState extends State<HomeTabXD> {
                             fontFamily: 'Poppins',
                             fontSize: SizeConfig.safeBlockHorizontal * 7.2,
                             fontWeight: FontWeight.w600,
-                            letterSpacing: 0.4
-                        ),
+                            letterSpacing: 0.4),
                       ),
-
                     ],
                   ),
                   Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(SizeConfig.safeBlockVertical)
-                    ),
+                        borderRadius: BorderRadius.circular(
+                            SizeConfig.safeBlockVertical)),
                     padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 2),
-                    child: Icon(Icons.search,size: SizeConfig.safeBlockHorizontal * 5.4,color: Colors.grey[700],),
+                    child: Icon(
+                      Icons.search,
+                      size: SizeConfig.safeBlockHorizontal * 5.4,
+                      color: Colors.grey[700],
+                    ),
                   ),
                 ],
               ),
@@ -90,44 +91,46 @@ class _HomeTabXDState extends State<HomeTabXD> {
           ],
         ),
 
-
         Padding(
           padding: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 26),
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Padding(
-              padding: EdgeInsets.only(
-                  left: SizeConfig.safeBlockHorizontal * 7),
+              padding:
+                  EdgeInsets.only(left: SizeConfig.safeBlockHorizontal * 7),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-
-
                   //Special
                   Padding(
-                    padding: EdgeInsets.only(right: SizeConfig.safeBlockHorizontal * 7),
+                    padding: EdgeInsets.only(
+                        right: SizeConfig.safeBlockHorizontal * 7),
                     child: Text(
                       'Today\'s Special',
                       style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: SizeConfig.safeBlockHorizontal * 3.3,
                           fontWeight: FontWeight.w500,
-                          letterSpacing: 0.2
-                      ),
+                          letterSpacing: 0.2),
                     ),
                   ),
-                  SizedBox(height: SizeConfig.safeBlockVertical,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical,
+                  ),
                   GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, ScaleRoute(page: MoreFoodXD(0)));
-                    },
+                      onTap: () {
+                        Navigator.push(
+                            context, ScaleRoute(page: MoreFoodXD(0)));
+                      },
                       child: SpecialMenuXD()),
 
-
                   //Breakfast
-                  SizedBox(height: SizeConfig.safeBlockVertical * 4,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical * 4,
+                  ),
                   Padding(
-                    padding: EdgeInsets.only(right: SizeConfig.safeBlockHorizontal * 4.4),
+                    padding: EdgeInsets.only(
+                        right: SizeConfig.safeBlockHorizontal * 4.4),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -137,12 +140,12 @@ class _HomeTabXDState extends State<HomeTabXD> {
                               fontFamily: 'Poppins',
                               fontSize: SizeConfig.safeBlockHorizontal * 3.3,
                               fontWeight: FontWeight.w500,
-                              letterSpacing: 0.2
-                          ),
+                              letterSpacing: 0.2),
                         ),
                         GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, ScaleRoute(page: MoreFoodXD(0)));
+                          onTap: () {
+                            Navigator.push(
+                                context, ScaleRoute(page: MoreFoodXD(0)));
                           },
                           child: Text(
                             'SHOW MORE',
@@ -151,27 +154,30 @@ class _HomeTabXDState extends State<HomeTabXD> {
                                 fontSize: SizeConfig.safeBlockHorizontal * 3,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: 0.2,
-                                color: Colors.orange[600]
-                            ),
+                                color: Colors.orange[600]),
                           ),
                         ),
                       ],
                     ),
                   ),
 
-                  SizedBox(height: SizeConfig.safeBlockVertical,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical,
+                  ),
                   GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, ScaleRoute(page: MoreFoodXD(0)));
+                      onTap: () {
+                        Navigator.push(
+                            context, ScaleRoute(page: MoreFoodXD(0)));
                       },
                       child: BreakfastMenuXD()),
 
-
-
                   //Lunch
-                  SizedBox(height: SizeConfig.safeBlockVertical * 4,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical * 4,
+                  ),
                   Padding(
-                    padding: EdgeInsets.only(right: SizeConfig.safeBlockHorizontal * 4.4),
+                    padding: EdgeInsets.only(
+                        right: SizeConfig.safeBlockHorizontal * 4.4),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -181,12 +187,12 @@ class _HomeTabXDState extends State<HomeTabXD> {
                               fontFamily: 'Poppins',
                               fontSize: SizeConfig.safeBlockHorizontal * 3.3,
                               fontWeight: FontWeight.w500,
-                              letterSpacing: 0.2
-                          ),
+                              letterSpacing: 0.2),
                         ),
                         GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, ScaleRoute(page: MoreFoodXD(1)));
+                          onTap: () {
+                            Navigator.push(
+                                context, ScaleRoute(page: MoreFoodXD(1)));
                           },
                           child: Text(
                             'SHOW MORE',
@@ -195,26 +201,30 @@ class _HomeTabXDState extends State<HomeTabXD> {
                                 fontSize: SizeConfig.safeBlockHorizontal * 3,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: 0.2,
-                                color: Colors.orange[600]
-                            ),
+                                color: Colors.orange[600]),
                           ),
                         ),
                       ],
                     ),
                   ),
 
-                  SizedBox(height: SizeConfig.safeBlockVertical,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical,
+                  ),
                   GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, ScaleRoute(page: MoreFoodXD(1)));
+                      onTap: () {
+                        Navigator.push(
+                            context, ScaleRoute(page: MoreFoodXD(1)));
                       },
                       child: LunchMenuXD()),
 
-
                   //Dinner
-                  SizedBox(height: SizeConfig.safeBlockVertical ,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical,
+                  ),
                   Padding(
-                    padding: EdgeInsets.only(right: SizeConfig.safeBlockHorizontal * 4.4),
+                    padding: EdgeInsets.only(
+                        right: SizeConfig.safeBlockHorizontal * 4.4),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -224,12 +234,12 @@ class _HomeTabXDState extends State<HomeTabXD> {
                               fontFamily: 'Poppins',
                               fontSize: SizeConfig.safeBlockHorizontal * 3.3,
                               fontWeight: FontWeight.w500,
-                              letterSpacing: 0.2
-                          ),
+                              letterSpacing: 0.2),
                         ),
                         GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, ScaleRoute(page: MoreFoodXD(2)));
+                          onTap: () {
+                            Navigator.push(
+                                context, ScaleRoute(page: MoreFoodXD(2)));
                           },
                           child: Text(
                             'SHOW MORE',
@@ -238,21 +248,24 @@ class _HomeTabXDState extends State<HomeTabXD> {
                                 fontSize: SizeConfig.safeBlockHorizontal * 3,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: 0.2,
-                                color: Colors.orange[600]
-                            ),
+                                color: Colors.orange[600]),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: SizeConfig.safeBlockVertical,),
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical,
+                  ),
                   GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, ScaleRoute(page: MoreFoodXD(2)));
+                      onTap: () {
+                        Navigator.push(
+                            context, ScaleRoute(page: MoreFoodXD(2)));
                       },
                       child: DinnerMenuXD()),
-                  SizedBox(height: SizeConfig.safeBlockVertical * 4,),
-
+                  SizedBox(
+                    height: SizeConfig.safeBlockVertical * 4,
+                  ),
                 ],
               ),
             ),

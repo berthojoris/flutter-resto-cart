@@ -1,50 +1,50 @@
-
-class FoodItem{
-  String name,time,type,price,image;
-  FoodItem(this.name,this.time,this.type,this.price,this.image);
+class FoodItem {
+  String name, time, type, price, image;
+  FoodItem(this.name, this.time, this.type, this.price, this.image);
 }
 
-class CartItem{
-  String name,count,price,image;
-  CartItem(this.name,this.count,this.price,this.image);
+class CartItem {
+  String name, count, price, image;
+  CartItem(this.name, this.count, this.price, this.image);
 }
 
-class CouponItem{
-  String image,code,name,description;
-  CouponItem(this.image,this.code,this.name,this.description);
+class CouponItem {
+  String image, code, name, description;
+  CouponItem(this.image, this.code, this.name, this.description);
 }
 
-class Food{
-  String image,name,type,discount,coupon,rating,time,price;
-  Food(this.image,this.name,this.type,this.discount,this.coupon,this.rating,this.time,this.price);
+class Food {
+  String image, name, type, discount, coupon, rating, time, price;
+  Food(this.image, this.name, this.type, this.discount, this.coupon,
+      this.rating, this.time, this.price);
 }
 
-class Payment{
-  String image,name;
-  Payment(this.image,this.name);
+class Payment {
+  String image, name;
+  Payment(this.image, this.name);
 }
 
-class DailyFood{
+class DailyFood {
   List dailyFoodItemList;
   String status;
 
-  DailyFood(this.dailyFoodItemList,this.status);
+  DailyFood(this.dailyFoodItemList, this.status);
 }
 
-class DailyFoodItem{
-  String image,name,type;
-  DailyFoodItem(this.image,this.name,this.type);
+class DailyFoodItem {
+  String image, name, type;
+  DailyFoodItem(this.image, this.name, this.type);
 }
 
-class Plan{
-  String price,validity;
+class Plan {
+  String price, validity;
   List planMenu;
-  Plan(this.price,this.validity,this.planMenu);
+  Plan(this.price, this.validity, this.planMenu);
 }
 
-class PlanMenu{
-  String name,count;
-  PlanMenu(this.name,this.count);
+class PlanMenu {
+  String name, count;
+  PlanMenu(this.name, this.count);
 }
 
 List titles = ['Food', 'Domestic', 'Entertainment', 'Contact'];
@@ -64,9 +64,8 @@ int totalPoints = 0;
 int currentIndex = 0;
 
 List studentPlanList = [];
-List employeePlanList= [];
+List employeePlanList = [];
 List othersPlanList = [];
-
 
 String uID = "";
 String planName = "";
