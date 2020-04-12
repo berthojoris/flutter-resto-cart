@@ -73,39 +73,37 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                //Appbar
-                SizedBox(
-                  height: SizeConfig.safeBlockVertical * 6.4,
-                ),
+                // ==================================== APP BAR ====================================
+                SizedBox(height: SizeConfig.safeBlockVertical * 6.4),
+                // Padding(
+                //   padding: EdgeInsets.only(
+                //     right: SizeConfig.safeBlockHorizontal * 7,
+                //   ),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     children: <Widget>[
+                //       GestureDetector(
+                //         onTap: () {
+                //           Navigator.pop(context);
+                //         },
+                //         child: Icon(
+                //           Icons.arrow_back_ios,
+                //           size: SizeConfig.safeBlockHorizontal * 5.4,
+                //           color: Colors.grey[800],
+                //         ),
+                //       ),
+                //       Icon(
+                //         Icons.person_outline,
+                //         color: Colors.grey[800],
+                //       )
+                //     ],
+                //   ),
+                // ),
+                SizedBox(height: SizeConfig.safeBlockVertical * 4),
                 Padding(
                   padding: EdgeInsets.only(
-                      right: SizeConfig.safeBlockHorizontal * 7),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            size: SizeConfig.safeBlockHorizontal * 5.4,
-                            color: Colors.grey[800],
-                          )),
-                      Icon(
-                        Icons.person_outline,
-                        color: Colors.grey[800],
-                      )
-                    ],
+                    right: SizeConfig.safeBlockHorizontal * 7,
                   ),
-                ),
-
-                SizedBox(
-                  height: SizeConfig.safeBlockVertical * 4,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                      right: SizeConfig.safeBlockHorizontal * 7),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -129,13 +127,14 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                         Text(
                                           'Breakfast',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  4.4,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.black,
-                                              letterSpacing: 0.4),
+                                            fontFamily: 'Poppins',
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    4.4,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black,
+                                            letterSpacing: 0.4,
+                                          ),
                                         ),
                                         CircleAvatar(
                                           radius:
@@ -147,19 +146,17 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                   : Text(
                                       'Breakfast',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  4,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.grey[600],
-                                          letterSpacing: 0.4),
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey[600],
+                                        letterSpacing: 0.4,
+                                      ),
                                     ),
                             ),
                           ),
-                          SizedBox(
-                            width: SizeConfig.safeBlockHorizontal * 8.4,
-                          ),
+                          SizedBox(width: SizeConfig.safeBlockHorizontal * 8.4),
                           GestureDetector(
                             onTap: () {
                               _setIndex(1);
@@ -168,7 +165,9 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                               transitionBuilder:
                                   (Widget child, Animation<double> animation) {
                                 return ScaleTransition(
-                                    child: child, scale: animation);
+                                  child: child,
+                                  scale: animation,
+                                );
                               },
                               duration: Duration(milliseconds: 200),
                               child: _index == 1
@@ -177,13 +176,14 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                         Text(
                                           'Lunch',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  4.4,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.black,
-                                              letterSpacing: 0.4),
+                                            fontFamily: 'Poppins',
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    4.4,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black,
+                                            letterSpacing: 0.4,
+                                          ),
                                         ),
                                         CircleAvatar(
                                           radius:
@@ -195,19 +195,17 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                   : Text(
                                       'Lunch',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  4,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.grey[600],
-                                          letterSpacing: 0.4),
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey[600],
+                                        letterSpacing: 0.4,
+                                      ),
                                     ),
                             ),
                           ),
-                          SizedBox(
-                            width: SizeConfig.safeBlockHorizontal * 8.4,
-                          ),
+                          SizedBox(width: SizeConfig.safeBlockHorizontal * 8.4),
                           GestureDetector(
                             onTap: () {
                               _setIndex(2);
@@ -225,13 +223,14 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                         Text(
                                           'Dinner',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  4.4,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.black,
-                                              letterSpacing: 0.4),
+                                            fontFamily: 'Poppins',
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    4.4,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black,
+                                            letterSpacing: 0.4,
+                                          ),
                                         ),
                                         CircleAvatar(
                                           radius:
@@ -243,13 +242,13 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                   : Text(
                                       'Dinner',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  4,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.grey[600],
-                                          letterSpacing: 0.4),
+                                        fontFamily: 'Poppins',
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 4,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey[600],
+                                        letterSpacing: 0.4,
+                                      ),
                                     ),
                             ),
                           ),
@@ -257,11 +256,14 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(
-                                SizeConfig.safeBlockVertical)),
-                        padding:
-                            EdgeInsets.all(SizeConfig.safeBlockHorizontal * 2),
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(
+                            SizeConfig.safeBlockVertical,
+                          ),
+                        ),
+                        padding: EdgeInsets.all(
+                          SizeConfig.safeBlockHorizontal * 2,
+                        ),
                         child: Icon(
                           Icons.search,
                           size: SizeConfig.safeBlockHorizontal * 5.4,
@@ -272,148 +274,152 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                   ),
                 ),
 
-                //Special List
-                SizedBox(
-                  height: SizeConfig.safeBlockVertical * 4,
-                ),
+                // ==================================== SPECIAL LIST ====================================
+                SizedBox(height: SizeConfig.safeBlockVertical * 4),
                 SizedBox(
                   height: SizeConfig.safeBlockVertical * 22,
                   child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      itemCount: 3,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: EdgeInsets.only(
-                              right: SizeConfig.safeBlockHorizontal * 4,
-                              top: SizeConfig.safeBlockHorizontal * 2),
-                          child: GestureDetector(
-                            onTap: () {
-                              addItemCart(_specialList[index]);
-                            },
-                            child: Stack(
-                              children: <Widget>[
-                                Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(
-                                            SizeConfig.safeBlockHorizontal *
-                                                2)),
-                                    height: SizeConfig.safeBlockVertical * 22,
-                                    width: SizeConfig.safeBlockHorizontal * 68,
-                                    child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(
-                                            SizeConfig.safeBlockHorizontal * 2),
-                                        child: Image.asset(
-                                          '${_specialList[index].image}',
-                                          fit: BoxFit.cover,
-                                        ))),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(
-                                                SizeConfig.safeBlockHorizontal *
-                                                    2),
-                                            bottomRight: Radius.circular(
-                                                SizeConfig.safeBlockHorizontal *
-                                                    2)),
-                                        color: Colors.black.withOpacity(0.2)),
-                                    height: SizeConfig.safeBlockVertical * 8,
-                                    width: SizeConfig.safeBlockHorizontal * 68,
-                                    child: Padding(
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3),
-                                      child: Row(
-                                        children: <Widget>[
-                                          Column(
-                                            children: <Widget>[
-                                              Text(
-                                                '${_specialList[index].name}',
-                                                style: TextStyle(
-                                                    fontFamily: 'Poppins',
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.w500,
-                                                    letterSpacing: 0.2,
-                                                    fontSize: SizeConfig
-                                                            .safeBlockHorizontal *
-                                                        3.4),
-                                              ),
-                                              Row(
-                                                children: <Widget>[
-                                                  Text(
-                                                    '${_specialList[index].type}',
-                                                    style: TextStyle(
-                                                        fontFamily: 'Poppins',
-                                                        color: Colors.white,
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            3),
-                                                  ),
-                                                  SizedBox(
-                                                    width: SizeConfig
-                                                            .safeBlockHorizontal *
-                                                        3.4,
-                                                  ),
-                                                  Icon(
-                                                    Icons.timer,
-                                                    color: Colors.white,
-                                                    size: SizeConfig
-                                                            .safeBlockHorizontal *
-                                                        2.4,
-                                                  ),
-                                                  SizedBox(
-                                                    width: SizeConfig
-                                                        .safeBlockHorizontal,
-                                                  ),
-                                                  Text(
-                                                    '${_specialList[index].time}',
-                                                    style: TextStyle(
-                                                        fontFamily: 'Poppins',
-                                                        color: Colors.white,
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            3),
-                                                  )
-                                                ],
-                                              )
-                                            ],
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                          ),
-                                          Text(
-                                            '\$ ${_specialList[index].price}',
-                                            style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          )
-                                        ],
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                    physics: BouncingScrollPhysics(),
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.only(
+                          right: SizeConfig.safeBlockHorizontal * 4,
+                          top: SizeConfig.safeBlockHorizontal * 2,
+                        ),
+                        child: GestureDetector(
+                          onTap: () {
+                            addItemCart(_specialList[index]);
+                          },
+                          child: Stack(
+                            children: <Widget>[
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    SizeConfig.safeBlockHorizontal * 2,
+                                  ),
+                                ),
+                                height: SizeConfig.safeBlockVertical * 22,
+                                width: SizeConfig.safeBlockHorizontal * 68,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(
+                                    SizeConfig.safeBlockHorizontal * 2,
+                                  ),
+                                  child: Image.asset(
+                                    '${_specialList[index].image}',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(
+                                        SizeConfig.safeBlockHorizontal * 2,
+                                      ),
+                                      bottomRight: Radius.circular(
+                                        SizeConfig.safeBlockHorizontal * 2,
                                       ),
                                     ),
+                                    color: Colors.black.withOpacity(0.2),
                                   ),
-                                )
-                              ],
-                            ),
+                                  height: SizeConfig.safeBlockVertical * 8,
+                                  width: SizeConfig.safeBlockHorizontal * 68,
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal:
+                                          SizeConfig.safeBlockHorizontal * 3,
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Column(
+                                          children: <Widget>[
+                                            Text(
+                                              '${_specialList[index].name}',
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w500,
+                                                  letterSpacing: 0.2,
+                                                  fontSize: SizeConfig
+                                                          .safeBlockHorizontal *
+                                                      3.4),
+                                            ),
+                                            Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  '${_specialList[index].type}',
+                                                  style: TextStyle(
+                                                      fontFamily: 'Poppins',
+                                                      color: Colors.white,
+                                                      fontSize: SizeConfig
+                                                              .safeBlockHorizontal *
+                                                          3),
+                                                ),
+                                                SizedBox(
+                                                  width: SizeConfig
+                                                          .safeBlockHorizontal *
+                                                      3.4,
+                                                ),
+                                                Icon(
+                                                  Icons.timer,
+                                                  color: Colors.white,
+                                                  size: SizeConfig
+                                                          .safeBlockHorizontal *
+                                                      2.4,
+                                                ),
+                                                SizedBox(
+                                                  width: SizeConfig
+                                                      .safeBlockHorizontal,
+                                                ),
+                                                Text(
+                                                  '${_specialList[index].time}',
+                                                  style: TextStyle(
+                                                      fontFamily: 'Poppins',
+                                                      color: Colors.white,
+                                                      fontSize: SizeConfig
+                                                              .safeBlockHorizontal *
+                                                          3),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                        ),
+                                        Text(
+                                          '\$ ${_specialList[index].price}',
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        )
+                                      ],
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
                           ),
-                        );
-                      }),
+                        ),
+                      );
+                    },
+                  ),
                 ),
 
-                //Popular List
-                SizedBox(
-                  height: SizeConfig.safeBlockVertical * 3,
-                ),
+                // ==================================== POPULAR LIST ====================================
+                SizedBox(height: SizeConfig.safeBlockVertical * 3),
                 Row(
                   children: <Widget>[
                     Icon(
@@ -421,16 +427,15 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                       color: Colors.yellow[600],
                       size: SizeConfig.safeBlockHorizontal * 4.4,
                     ),
-                    SizedBox(
-                      width: SizeConfig.safeBlockHorizontal * 2,
-                    ),
+                    SizedBox(width: SizeConfig.safeBlockHorizontal * 2),
                     Text(
                       'Popular',
                       style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: SizeConfig.safeBlockHorizontal * 4,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0.2),
+                        fontFamily: 'Poppins',
+                        fontSize: SizeConfig.safeBlockHorizontal * 4,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.2,
+                      ),
                     ),
                   ],
                 ),
@@ -440,12 +445,13 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                       ? SizeConfig.safeBlockVertical * 44
                       : SizeConfig.safeBlockVertical * 54,
                   child: ListView.builder(
-                    itemCount: 6,
+                    itemCount: 5,
                     physics: BouncingScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: EdgeInsets.only(
-                            bottom: SizeConfig.safeBlockHorizontal * 4.4),
+                          bottom: SizeConfig.safeBlockHorizontal * 4.4,
+                        ),
                         child: GestureDetector(
                           onTap: () {
                             addItemCart(_popularList[index]);
@@ -454,23 +460,26 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(
-                                          SizeConfig.safeBlockHorizontal * 2)),
-                                  height: SizeConfig.safeBlockVertical * 12,
-                                  width: SizeConfig.safeBlockHorizontal * 26,
-                                  child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(
-                                          SizeConfig.safeBlockHorizontal * 2),
-                                      child: Image.asset(
-                                        '${_popularList[index].image}',
-                                        fit: BoxFit.cover,
-                                      ))),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal * 2.6,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    SizeConfig.safeBlockHorizontal * 2,
+                                  ),
+                                ),
+                                height: SizeConfig.safeBlockVertical * 12,
+                                width: SizeConfig.safeBlockHorizontal * 26,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(
+                                      SizeConfig.safeBlockHorizontal * 2),
+                                  child: Image.asset(
+                                    '${_popularList[index].image}',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
+                              SizedBox(
+                                  width: SizeConfig.safeBlockHorizontal * 2.6),
                               Container(
-                                width: SizeConfig.safeBlockHorizontal * 50,
+                                width: SizeConfig.safeBlockHorizontal * 58,
                                 height: SizeConfig.safeBlockVertical * 12,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -479,27 +488,27 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                     Text(
                                       '${_popularList[index].name}',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 0.2,
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3.4),
+                                        fontFamily: 'Poppins',
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 0.2,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                3.4,
+                                      ),
                                     ),
                                     Text(
                                       '${_popularList[index].type}',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          color: Colors.grey[800],
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3),
+                                        fontFamily: 'Poppins',
+                                        color: Colors.grey[800],
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 3,
+                                      ),
                                     ),
                                     SizedBox(
-                                      height:
-                                          SizeConfig.safeBlockHorizontal * 2,
-                                    ),
+                                        height:
+                                            SizeConfig.safeBlockHorizontal * 2),
                                     Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
@@ -513,61 +522,23 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                                   3.4,
                                         ),
                                         SizedBox(
-                                          width: SizeConfig.safeBlockHorizontal,
-                                        ),
+                                            width:
+                                                SizeConfig.safeBlockHorizontal),
                                         Text(
-                                          '${_popularList[index].discount}% off',
+                                          '${_popularList[index].discount}% off | Use coupon ${_popularList[index].coupon}',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                          ),
                                         ),
-                                        SizedBox(
-                                          width: SizeConfig.safeBlockHorizontal,
-                                        ),
-                                        Text(
-                                          '|',
-                                          style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
-                                        ),
-                                        SizedBox(
-                                          width: SizeConfig.safeBlockHorizontal,
-                                        ),
-                                        Text(
-                                          'Use coupon ${_popularList[index].coupon}',
-                                          style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
-                                        )
                                       ],
                                     ),
-                                    SizedBox(
-                                      height:
-                                          SizeConfig.safeBlockHorizontal * 1.4,
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  2),
-                                      child: Container(
-                                        height: SizeConfig.safeBlockHorizontal *
-                                            0.1,
-                                        color: Colors.grey[400],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height:
-                                          SizeConfig.safeBlockHorizontal * 2,
+                                    Divider(
+                                      color: Colors.grey[400],
+                                      height: 5,
                                     ),
                                     Row(
                                       crossAxisAlignment:
@@ -582,30 +553,31 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                           color: Colors.grey[600],
                                         ),
                                         SizedBox(
-                                          width: SizeConfig.safeBlockHorizontal,
-                                        ),
+                                            width:
+                                                SizeConfig.safeBlockHorizontal),
                                         Text(
                                           '${_popularList[index].rating}',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                          ),
                                         ),
                                         SizedBox(
-                                          width:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3,
-                                        ),
+                                            width:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3),
                                         Text(
                                           '.',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                          ),
                                         ),
                                         SizedBox(
                                           width:
@@ -631,32 +603,32 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                                   3),
                                         ),
                                         SizedBox(
-                                          width:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3,
-                                        ),
+                                            width:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3),
                                         Text(
                                           '.',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                          ),
                                         ),
                                         SizedBox(
-                                          width:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3,
-                                        ),
+                                            width:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3),
                                         Text(
                                           '\$ ${_popularList[index].price}',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.black,
-                                              fontSize: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  3),
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    3,
+                                          ),
                                         )
                                       ],
                                     ),
@@ -673,6 +645,7 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
               ],
             ),
           ),
+          // ==================================== CART ITEM BOTTOM ====================================
           AnimatedOpacity(
             opacity: cart.length > 0 ? 1 : 0,
             duration: Duration(milliseconds: 200),
@@ -688,15 +661,19 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(
-                              SizeConfig.safeBlockHorizontal * 14.4),
-                          topLeft: Radius.circular(
-                              SizeConfig.safeBlockHorizontal * 14.4)),
+                        topRight: Radius.circular(
+                          SizeConfig.safeBlockHorizontal * 14.4,
+                        ),
+                        topLeft: Radius.circular(
+                          SizeConfig.safeBlockHorizontal * 14.4,
+                        ),
+                      ),
                     ),
                     height: MediaQuery.of(context).size.height * 0.11,
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.safeBlockHorizontal * 10),
+                        horizontal: SizeConfig.safeBlockHorizontal * 3,
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -709,14 +686,16 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                 width: 40.4,
                                 height: 2.2,
                                 decoration: BoxDecoration(
-                                    color: Colors.grey[500],
-                                    borderRadius: BorderRadius.circular(20)),
+                                  color: Colors.grey[500],
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.only(
-                                bottom: SizeConfig.safeBlockVertical * 1.6),
+                              bottom: SizeConfig.safeBlockVertical * 1.6,
+                            ),
                             child: Row(
                               children: <Widget>[
                                 GestureDetector(
@@ -730,22 +709,19 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                     child: Text(
                                       'Cart',
                                       style: TextStyle(
-                                          color: Colors.grey[800],
-                                          fontFamily: 'Poppins',
-                                          letterSpacing: 0.6,
-                                          fontWeight: FontWeight.w700,
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  4),
+                                        color: Colors.grey[800],
+                                        fontFamily: 'Poppins',
+                                        letterSpacing: 0.6,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 4,
+                                      ),
                                     ),
                                     angle: -pi / 180 * 90,
                                   ),
                                 ),
                                 SizedBox(
-                                  width: SizeConfig.safeBlockHorizontal * 4,
-                                ),
-                                SizedBox(
-                                  width: SizeConfig.safeBlockHorizontal * 54,
+                                  width: SizeConfig.safeBlockHorizontal * 60,
                                   height: SizeConfig.safeBlockVertical * 6,
                                   child: ListView.builder(
                                     controller: cartScrollController,
@@ -759,9 +735,10 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                         },
                                         child: Padding(
                                           padding: EdgeInsets.symmetric(
-                                              horizontal: SizeConfig
-                                                      .safeBlockHorizontal *
-                                                  2.4),
+                                            horizontal:
+                                                SizeConfig.safeBlockHorizontal *
+                                                    2.4,
+                                          ),
                                           child: Stack(
                                             children: <Widget>[
                                               Center(
@@ -816,17 +793,17 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: SizeConfig.safeBlockHorizontal * 4,
-                                ),
+                                    width: SizeConfig.safeBlockHorizontal * 4),
                                 Text(
                                   '\$ $price',
                                   style: TextStyle(
-                                      color: Colors.grey[900],
-                                      fontFamily: 'Poppins',
-                                      letterSpacing: 0.6,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize:
-                                          SizeConfig.safeBlockHorizontal * 3.4),
+                                    color: Colors.grey[900],
+                                    fontFamily: 'Poppins',
+                                    letterSpacing: 0.6,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal * 3.4,
+                                  ),
                                 )
                               ],
                             ),

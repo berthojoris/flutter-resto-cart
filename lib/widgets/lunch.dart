@@ -11,26 +11,10 @@ class LunchMenuXD extends StatefulWidget {
 
 class _LunchMenuXDState extends State<LunchMenuXD> {
   List lunchList = [
-    new Food(
-      'img/lunch2.png',
-      'Chicken Briyani',
-      'Lunch , North Indian',
-      '50',
-      'LUNCHIT',
-      '4.5',
-      '20 min',
-      '30',
-    ),
-    new Food(
-      'img/lunch1.png',
-      'Chicken Butter Masala',
-      'Non-Veg',
-      '40',
-      'LUNCHIT',
-      '4.2',
-      '10 min',
-      '25',
-    ),
+    new Food('img/lunch2.png', 'Chicken Briyani', 'Lunch , North Indian', '50',
+        'LUNCHIT', '4.5', '20 min', '30'),
+    new Food('img/lunch1.png', 'Chicken Butter Masala', 'Non-Veg', '40',
+        'LUNCHIT', '4.2', '10 min', '25'),
   ];
 
   @override

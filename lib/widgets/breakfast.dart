@@ -11,49 +11,17 @@ class BreakfastMenuXD extends StatefulWidget {
 
 class _BreakfastMenuXDState extends State<BreakfastMenuXD> {
   List breakfastFoodList1 = [
-    new Food(
-      'img/breakfast1.png',
-      'Salad Omlet',
-      'Breakfast , Healthy',
-      '30',
-      'DAILY4',
-      '4.0',
-      '15 min',
-      '10',
-    ),
-    new Food(
-      'img/breakfast2.png',
-      'Cheese Bread',
-      'Breakfast , Tasty',
-      '10',
-      'MORNINGX',
-      '3.4',
-      '10 min',
-      '14',
-    ),
+    new Food('img/breakfast1.png', 'Salad Omlet', 'Breakfast , Healthy', '30',
+        'DAILY4', '4.0', '15 min', '10'),
+    new Food('img/breakfast2.png', 'Cheese Bread', 'Breakfast , Tasty', '10',
+        'MORNINGX', '3.4', '10 min', '14'),
   ];
 
   List breakfastFoodList2 = [
-    new Food(
-      'img/breakfast3.png',
-      'Chicken Sausage',
-      'Non-Veg , Rich',
-      '25',
-      'MORNINGX',
-      '4.2',
-      '20 min',
-      '25',
-    ),
-    new Food(
-      'img/breakfast4.png',
-      'Oats - Fruits Mixed',
-      'Starter , Veg',
-      '30',
-      'DAILYFOOD',
-      '4.0',
-      '5 min',
-      '15',
-    ),
+    new Food('img/breakfast3.png', 'Chicken Sausage', 'Non-Veg , Rich', '25',
+        'MORNINGX', '4.2', '20 min', '25'),
+    new Food('img/breakfast4.png', 'Oats - Fruits Mixed', 'Starter , Veg', '30',
+        'DAILYFOOD', '4.0', '5 min', '15'),
   ];
 
   @override
@@ -257,7 +225,7 @@ class _BreakfastMenuXDState extends State<BreakfastMenuXD> {
                           SizeConfig.safeBlockHorizontal * 2,
                         ),
                       ),
-                      height: SizeConfig.safeBlockVertical * 12,
+                      height: SizeConfig.safeBlockVertical * 14,
                       width: SizeConfig.safeBlockHorizontal * 26,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(
