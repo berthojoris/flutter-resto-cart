@@ -133,13 +133,9 @@ class _BreakfastMenuXDState extends State<BreakfastMenuXD> {
                           ),
                           SizedBox(
                               height: SizeConfig.safeBlockHorizontal * 1.4),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: SizeConfig.safeBlockHorizontal * 2),
-                            child: Container(
-                              height: SizeConfig.safeBlockHorizontal * 0.1,
-                              color: Colors.grey[400],
-                            ),
+                          Divider(
+                            color: Colors.grey[400],
+                            height: 3,
                           ),
                           SizedBox(height: SizeConfig.safeBlockHorizontal * 2),
                           Row(
@@ -225,7 +221,7 @@ class _BreakfastMenuXDState extends State<BreakfastMenuXD> {
                           SizeConfig.safeBlockHorizontal * 2,
                         ),
                       ),
-                      height: SizeConfig.safeBlockVertical * 14,
+                      height: SizeConfig.safeBlockVertical * 13,
                       width: SizeConfig.safeBlockHorizontal * 26,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(

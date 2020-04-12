@@ -74,31 +74,31 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 // ==================================== APP BAR ====================================
-                SizedBox(height: SizeConfig.safeBlockVertical * 6.4),
-                // Padding(
-                //   padding: EdgeInsets.only(
-                //     right: SizeConfig.safeBlockHorizontal * 7,
-                //   ),
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     children: <Widget>[
-                //       GestureDetector(
-                //         onTap: () {
-                //           Navigator.pop(context);
-                //         },
-                //         child: Icon(
-                //           Icons.arrow_back_ios,
-                //           size: SizeConfig.safeBlockHorizontal * 5.4,
-                //           color: Colors.grey[800],
-                //         ),
-                //       ),
-                //       Icon(
-                //         Icons.person_outline,
-                //         color: Colors.grey[800],
-                //       )
-                //     ],
-                //   ),
-                // ),
+                SizedBox(height: 30),
+                Padding(
+                  padding: EdgeInsets.only(
+                    right: SizeConfig.safeBlockHorizontal * 7,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          size: SizeConfig.safeBlockHorizontal * 5.4,
+                          color: Colors.grey[800],
+                        ),
+                      ),
+                      Icon(
+                        Icons.person_outline,
+                        color: Colors.grey[800],
+                      )
+                    ],
+                  ),
+                ),
                 SizedBox(height: SizeConfig.safeBlockVertical * 4),
                 Padding(
                   padding: EdgeInsets.only(
@@ -273,7 +273,6 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                     ],
                   ),
                 ),
-
                 // ==================================== SPECIAL LIST ====================================
                 SizedBox(height: SizeConfig.safeBlockVertical * 4),
                 SizedBox(
@@ -417,7 +416,6 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                     },
                   ),
                 ),
-
                 // ==================================== POPULAR LIST ====================================
                 SizedBox(height: SizeConfig.safeBlockVertical * 3),
                 Row(
@@ -439,11 +437,10 @@ class _MoreFoodXDState extends State<MoreFoodXD> {
                     ),
                   ],
                 ),
-
                 SizedBox(
                   height: cart.length > 0
                       ? SizeConfig.safeBlockVertical * 44
-                      : SizeConfig.safeBlockVertical * 54,
+                      : SizeConfig.safeBlockVertical * 56,
                   child: ListView.builder(
                     itemCount: 5,
                     physics: BouncingScrollPhysics(),
