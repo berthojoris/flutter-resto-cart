@@ -11,10 +11,26 @@ class LunchMenuXD extends StatefulWidget {
 
 class _LunchMenuXDState extends State<LunchMenuXD> {
   List lunchList = [
-    new Food('img/lunch2.png', 'Chicken Briyani', 'Lunch , North Indian', '50',
-        'LUNCHIT', '4.5', '20 min', '30'),
-    new Food('img/lunch1.png', 'Chicken Butter Masala', 'Non-Veg', '40',
-        'LUNCHIT', '4.2', '10 min', '25'),
+    new Food(
+      'img/lunch2.png',
+      'Chicken Briyani',
+      'Lunch , North Indian',
+      '50',
+      'LUNCHIT',
+      '4.5',
+      '20 min',
+      '30',
+    ),
+    new Food(
+      'img/lunch1.png',
+      'Chicken Butter Masala',
+      'Non-Veg',
+      '40',
+      'LUNCHIT',
+      '4.2',
+      '10 min',
+      '25',
+    ),
   ];
 
   @override
@@ -29,32 +45,36 @@ class _LunchMenuXDState extends State<LunchMenuXD> {
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(
-                right: SizeConfig.safeBlockHorizontal * 4,
-                top: SizeConfig.safeBlockHorizontal * 2),
+              right: SizeConfig.safeBlockHorizontal * 4,
+              top: SizeConfig.safeBlockHorizontal * 2,
+            ),
             child: Column(
               children: <Widget>[
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                                SizeConfig.safeBlockHorizontal * 2)),
-                        height: SizeConfig.safeBlockVertical * 12,
-                        width: SizeConfig.safeBlockHorizontal * 26,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(
-                                SizeConfig.safeBlockHorizontal * 2),
-                            child: Image.asset(
-                              '${lunchList[index].image}',
-                              fit: BoxFit.cover,
-                            ))),
-                    SizedBox(
-                      width: SizeConfig.safeBlockHorizontal * 2.4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          SizeConfig.safeBlockHorizontal * 2,
+                        ),
+                      ),
+                      height: 110,
+                      width: SizeConfig.safeBlockHorizontal * 26,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          SizeConfig.safeBlockHorizontal * 2,
+                        ),
+                        child: Image.asset(
+                          '${lunchList[index].image}',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
+                    SizedBox(width: SizeConfig.safeBlockHorizontal * 2.4),
                     Container(
                       width: SizeConfig.safeBlockHorizontal * 50,
-                      height: SizeConfig.safeBlockVertical * 12,
+                      height: 110,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,22 +82,22 @@ class _LunchMenuXDState extends State<LunchMenuXD> {
                           Text(
                             '${lunchList[index].name}',
                             style: TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 0.2,
-                                fontSize: SizeConfig.safeBlockHorizontal * 3.4),
+                              fontFamily: 'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 0.2,
+                              fontSize: SizeConfig.safeBlockHorizontal * 3.4,
+                            ),
                           ),
                           Text(
                             '${lunchList[index].type}',
                             style: TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Colors.grey[800],
-                                fontSize: SizeConfig.safeBlockHorizontal * 3),
+                              fontFamily: 'Poppins',
+                              color: Colors.grey[800],
+                              fontSize: SizeConfig.safeBlockHorizontal * 3,
+                            ),
                           ),
-                          SizedBox(
-                            height: SizeConfig.safeBlockHorizontal * 2,
-                          ),
+                          SizedBox(height: SizeConfig.safeBlockHorizontal * 2),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -86,55 +106,22 @@ class _LunchMenuXDState extends State<LunchMenuXD> {
                                 'img/copun.png',
                                 width: SizeConfig.safeBlockHorizontal * 3.4,
                               ),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal,
-                              ),
-                              Text(
-                                '${lunchList[index].discount}% off',
-                                style: TextStyle(
+                              SizedBox(width: SizeConfig.safeBlockHorizontal),
+                              Flexible(
+                                child: Text(
+                                  '${lunchList[index].discount}% off dari harga asli makanan mantab',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
                                     fontFamily: 'Poppins',
                                     color: Colors.black,
                                     fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                        SizeConfig.safeBlockHorizontal * 3,
+                                  ),
+                                ),
                               ),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal,
-                              ),
-                              Text(
-                                '|',
-                                style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
-                              ),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal,
-                              ),
-                              Text(
-                                'Use coupon ${lunchList[index].coupon}',
-                                style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
-                              )
                             ],
                           ),
-                          SizedBox(
-                            height: SizeConfig.safeBlockHorizontal * 1.4,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: SizeConfig.safeBlockHorizontal * 2),
-                            child: Container(
-                              height: SizeConfig.safeBlockHorizontal * 0.1,
-                              color: Colors.grey[400],
-                            ),
-                          ),
-                          SizedBox(
-                            height: SizeConfig.safeBlockHorizontal * 2,
-                          ),
+                          Divider(color: Colors.grey[400]),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -144,68 +131,60 @@ class _LunchMenuXDState extends State<LunchMenuXD> {
                                 size: SizeConfig.safeBlockHorizontal * 3,
                                 color: Colors.grey[600],
                               ),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal,
-                              ),
+                              SizedBox(width: SizeConfig.safeBlockHorizontal),
                               Text(
                                 '${lunchList[index].rating}',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                ),
                               ),
                               SizedBox(
-                                width: SizeConfig.safeBlockHorizontal * 3,
-                              ),
+                                  width: SizeConfig.safeBlockHorizontal * 3),
                               Text(
                                 '.',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                ),
                               ),
                               SizedBox(
-                                width: SizeConfig.safeBlockHorizontal * 3,
-                              ),
+                                  width: SizeConfig.safeBlockHorizontal * 3),
                               Icon(
                                 Icons.timer,
                                 color: Colors.black,
                                 size: SizeConfig.safeBlockHorizontal * 2.4,
                               ),
-                              SizedBox(
-                                width: SizeConfig.safeBlockHorizontal,
-                              ),
+                              SizedBox(width: SizeConfig.safeBlockHorizontal),
                               Text(
                                 '${lunchList[index].time}',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                ),
                               ),
                               SizedBox(
-                                width: SizeConfig.safeBlockHorizontal * 3,
-                              ),
+                                  width: SizeConfig.safeBlockHorizontal * 3),
                               Text(
                                 '.',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                ),
                               ),
                               SizedBox(
-                                width: SizeConfig.safeBlockHorizontal * 3,
-                              ),
+                                  width: SizeConfig.safeBlockHorizontal * 3),
                               Text(
                                 '\$ ${lunchList[index].price}',
                                 style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black,
-                                    fontSize:
-                                        SizeConfig.safeBlockHorizontal * 3),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.black,
+                                  fontSize: SizeConfig.safeBlockHorizontal * 3,
+                                ),
                               )
                             ],
                           ),
